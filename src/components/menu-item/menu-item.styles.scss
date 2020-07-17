@@ -9,15 +9,14 @@
   margin: 0 7.5px 15px;
   background-position: center;
   background-size: cover;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
   overflow: hidden;
+  transition: all 0.85s cubic-bezier(0.2, 0.8, 0.2, 1);
 
   &:hover {
     cursor: pointer;
-
-    & .background-image {
-      transform: scale(1.1) translateY(-3px);
-      transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
-    }
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 
     & .content {
       opacity: 0.9;
