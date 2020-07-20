@@ -54,7 +54,9 @@ class SignIn extends Component {
           />
           <div className="flex-container">
             {" "}
-            <CustomButton type="submit">Sign In</CustomButton>
+            <CustomButton type="submit">
+              Sign In
+            </CustomButton>
             <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
               Sign in with Google
             </CustomButton>

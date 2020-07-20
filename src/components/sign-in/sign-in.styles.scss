@@ -1,13 +1,12 @@
 .sign-in {
   margin: 10px 20px;
-  width: 37vw;
-  text-align: center;
   padding: 10px 50px;
   display: flex;
   flex-direction: column;
 
   .flex-container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
   }
 }
