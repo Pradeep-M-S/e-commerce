@@ -5,7 +5,7 @@ import SignInAndSignUpPage from "../../pages/sign-in-and-sign-out/sign-in-and-si
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
 
-import { signInWithGoogle } from "../../firebase/firebase.utils";
+import { auth, signInWithGoogle } from "../../firebase/firebase.utils";
 
 class SignIn extends Component {
   constructor(props) {
@@ -17,9 +17,17 @@ class SignIn extends Component {
     };
   }
 
-  handleSubmit = (e) => {
+  handleSubmit = async (e) => {
     e.preventDefault();
 
+    const { password, email } = this.state;
+
+    try {
+      await auth.signInWithEmailAndPassword(email, password);
+      this.setState({ email: "", password: "" });
+    } catch (err) {
+      console.log(err);
+    }
     this.setState({ email: "", password: "" });
   };
 
@@ -54,9 +62,7 @@ class SignIn extends Component {
           />
           <div className="flex-container">
             {" "}
-            <CustomButton type="submit">
-              Sign In
-            </CustomButton>
+            <CustomButton type="submit">Sign In</CustomButton>
             <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
               Sign in with Google
             </CustomButton>
