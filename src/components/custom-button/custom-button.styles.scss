@@ -15,6 +15,8 @@
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: 200ms all ease-in;
+  display: flex;
+  justify-content: center;
 
   &:hover {
     background-color: white;
@@ -38,6 +40,18 @@
     &:hover {
       background-color: #357ae8;
       border: none;
+    }
+  }
+
+  &.inverted {
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+
+    &:hover {
+      border: none;
+      background-color: black;
+      color: white;
     }
   }
 }

@@ -1,4 +1,4 @@
-import firebase, { initializeApp } from "firebase/app";
+import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
 
@@ -36,7 +36,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
     }
   }
 
-  return userRef; 
+  return userRef;
 };
 
 firebase.initializeApp(config);

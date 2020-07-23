@@ -1,16 +1,17 @@
 .collection-item {
   width: 22%;
   display: flex;
+  position: relative;
   flex-direction: column;
   height: 350px;
   align-items: center;
-
   .image {
     width: 100%;
     height: 95%;
     background-size: cover;
     background-position: center;
     margin-bottom: 5px;
+    transition: all 0.25s ease;
   }
 
   .collection-footer {
@@ -27,6 +28,25 @@
 
     .price {
       width: 20%;
+    }
+  }
+
+  button {
+    position: absolute;
+    top: 73%;
+    opacity: 0.8;
+    display: none;
+  }
+
+  &:hover {
+    .image {
+      opacity: 0.8;
+      filter: blur(1px);
+    }
+
+    button {
+      display: flex;
+      opacity: 0.85;
     }
   }
 }

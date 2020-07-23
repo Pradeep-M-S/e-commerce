@@ -9,7 +9,6 @@ import Header from "./components/header/header.component";
 import SignInAndSignUpPage from "./pages/sign-in-and-sign-out/sign-in-and-sign-up.component";
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 import { setCurrentUser } from "./redux/user/user.actions";
-import SignIn from "./components/sign-in/sign-in.component";
 
 class App extends Component {
   constructor(props) {
